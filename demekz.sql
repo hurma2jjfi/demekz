@@ -42,6 +42,10 @@ CREATE TABLE `complaints` (
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d15e329 (dobavil badge and status)
 --
 -- Дамп данных таблицы `complaints`
 --
@@ -59,7 +63,11 @@ INSERT INTO `complaints` (`id`, `user_id`, `address`, `type`, `description`, `im
 CREATE TABLE `migration` (
   `version` varchar(180) NOT NULL,
   `apply_time` int DEFAULT NULL
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+>>>>>>> d15e329 (dobavil badge and status)
 
 --
 -- Дамп данных таблицы `migration`
@@ -76,13 +84,21 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
+<<<<<<< HEAD
   `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+=======
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+>>>>>>> d15e329 (dobavil badge and status)
   `fio` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `role` tinyint NOT NULL DEFAULT '0'
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+>>>>>>> d15e329 (dobavil badge and status)
 
 --
 -- Дамп данных таблицы `users`

@@ -43,7 +43,29 @@ $this->title = 'Панель администратора';
             },
             'label' => 'Фото',
         ],
-        'status',
+        [
+            'attribute' => 'status',
+            'format' => 'html',
+            'value' => function($model) {
+                switch ($model->status) {
+                    case Complaint::STATUS_REJECTED:
+                        $class = 'badge bg-danger';
+                        break;
+                    case Complaint::STATUS_IN_PROGRESS:
+                        $class = 'badge bg-warning text-dark';
+                        break;
+                    case Complaint::STATUS_RESOLVED:
+                        $class = 'badge bg-success';
+                        break;
+                    case Complaint::STATUS_NEW:
+                    default:
+                        $class = 'badge bg-secondary';
+                        break;
+                }
+                return Html::tag('span', Html::encode($model->status), ['class' => $class]);
+            },
+            'label' => 'Статус',
+        ],
         'admin_comment:ntext',
         'created_at',
         [
@@ -61,6 +83,7 @@ $this->title = 'Панель администратора';
         ],        
     ],
 ]); ?>
+
 </div>
 
 
